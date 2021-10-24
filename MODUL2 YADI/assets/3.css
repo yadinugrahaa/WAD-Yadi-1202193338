@@ -1,0 +1,21 @@
+body,
+html {
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav{
+    background-color: lightblue;
+}
+
+.container-fluid{
+    padding: 70px 150px 10px 150px;
+}
+
+table{
+    background-color: whitesmoke;
+}
+
+table thead{
+    background-color: rgb(71, 157, 102);
+    color: whitesmoke;
+}
