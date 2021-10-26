@@ -43,7 +43,7 @@
         $name = $_POST['name'];
         $checkin = $_POST['eventdate'];
         $checkin_dsply = '';
-        $duration = $_POST['duration'];
+        $dur = $_POST['dur'];
         $checkout = '';
         $roomtype = $_POST['roomtype'];
         $phone = $_POST['phone_num'];

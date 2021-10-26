@@ -35,7 +35,7 @@
     </nav>
 
     <!-- PHP -->
-    <?php
+    <?=
         $method_selected = '';
         $image_selected = '';
         $standard_bk = isset($_POST['card1']);
@@ -90,7 +90,7 @@
         </div>
     
             <div class="col-md-6">
-                <form action="mybooking.php" method="post">
+                <form action="home.php" method="post">
                     <div class="form-group">
                         Name
                         <input type="text" class="form-control" name="name">
