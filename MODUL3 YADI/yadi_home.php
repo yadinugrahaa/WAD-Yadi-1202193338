@@ -6,7 +6,7 @@
              </script>";
     }
     $query = "SELECT  * FROM buku_table";
-    $selects = mysqli_query($koneksi, $query);
+    $select = mysqli_query($koneksi, $query);
 ?>
 
 <html>

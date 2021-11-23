@@ -29,7 +29,7 @@ if (isset($_POST["update"])) {
     if (!in_array($ext, $ekstensi)) {
         header("location:yadi_detail.php?id_buku=$id_buku&alert=file_extension_not_allowed");
         $gambar = $rand . '_' . $filename;
-        $query = "UPDATE buku_table SET judul_buku='$judul_buku', penulis_buku='$penulis_buku', tahun_terbit='$tahun_terbit', deskripsi='$deskripsi', tag='$tag', bahasa='$bahasa' WHERE id_buku='$id_buku'";
+        $query = "UPDATE buku_table judul_buku='$judul_buku', penulis_buku='$penulis_buku', tahun_terbit='$tahun_terbit', deskripsi='$deskripsi', tag='$tag', bahasa='$bahasa' WHERE id_buku='$id_buku'";
         move_uploaded_file($_FILES['gambar']['tmp_name'], 'cover/' . $rand . '_' . $filename);
         mysqli_query($koneksi, $query);
     } else {

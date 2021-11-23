@@ -6,7 +6,7 @@ if(!$koneksi) {
          </script>";
 }
 $id_buku = $_GET["id_buku"];
-$query = "DELETE FROM buku_table WHERE id_buku='$id_buku'";
+$query = "DELETE FROM buku_table WHERE id='$id'";
 mysqli_query($koneksi, $query);
 header('Location: yadi_home.php')
 ?>
