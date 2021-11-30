@@ -23,7 +23,7 @@
 session_start();
 include("koneksi.php");
 
-if (!isset($_SESSION["is_login"])) {
+if (!isset($_SESSION["islogin"])) {
     header("location: login.php");
 }
 

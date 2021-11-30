@@ -34,7 +34,7 @@ if (isset($_POST["login"])) {
     if ($result->num_rows == 0) {
         $message = "Gagal login: user tidak ditemukan!";
     } else {
-        $user = mysqli_fetch_assoc($result);
+        $users = mysqli_fetch_assoc($result);
         if(password_verify($sandi, $user["password"])) {
             if($remember_me){
                 setcookie("email", $user["email"], strtotime('+1 days'), '/');
