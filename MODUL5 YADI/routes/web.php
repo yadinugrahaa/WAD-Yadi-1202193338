@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\PatientController;
+use App\Http\Controllers\VaccineController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,10 +19,14 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/about', function () {
-    return view('about');
-});
 
-Route::get('/post', function () {
-    return view('post');
-});
+Route::get('/patient', [PatientController::class, 'index']);
+Route::post('/patient/{vaccine:id}', [PatientController::class, 'store']);
+Route::patch('/patient/update/{patient:id}', [PatientController::class, 'update']);
+Route::delete('/patient/delete/{patient:id}', [PatientController::class, 'destroy']);
+
+
+Route::get('/vaccine', [VaccineController::class, 'index']);
+Route::post('/vaccine', [VaccineController::class, 'store']);
+Route::patch('/vaccine/update/{vaccine:id}', [VaccineController::class, 'update']);
+Route::delete('/vaccine/delete/{vaccine:id}', [VaccineController::class, 'destroy']);
