@@ -9,7 +9,7 @@
     </div>
 
     <div class="d-flex justify-content-center">
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addvaccine">
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addvaccine">
             INPUT VACCINE
         </button>
     </div>
@@ -17,6 +17,7 @@
     @if ($vaccines->isNotEmpty())
     <table class="table table-striped mt-3">
         <thead class="table-Secondary">
+            
             <tr>
                 <th class="col-md-1">#</th>
                 <th class="col">Name</th>
@@ -26,6 +27,7 @@
             </tr>
         </thead>
         <tbody>
+
             @foreach ($vaccines as $vaccine)
             <tr>
                 <th>{{$vaccine->id}}</th>
@@ -33,13 +35,17 @@
                 <td>{{$vaccine->image}}</td>
                 <td>{{$vaccine->price}}</td>
                 <td>
+
                     <button type="button" data-bs-toggle="modal" data-bs-target="#editvaccine{{$vaccine->id}}" class="btn btn-success mr-5">Edit</button>
+
                     <button type="button" data-bs-toggle="modal" data-bs-target="#deletevaccine{{$vaccine->id}}" class="btn btn-danger">Delete</button>
                 </td>
             </tr>
             @endforeach
         </tbody>
     </table>
+
+
     @else
     <div class="d-flex justify-content-center mt-3">
         Tidak ada data Vaksin
@@ -48,12 +54,14 @@
 
     <!-- MODAL ADD VACCINE -->
     <div class="modal fade" id="addvaccine" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Add Vaccine</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+
                 <form action="/vaccine" method="post">
                     @csrf
                     <div class="modal-body">
@@ -98,9 +106,11 @@
                     <h5 class="modal-title" id="exampleModalLabel">Edit Vaccine</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+
                 <form action="/vaccine/update/{{$vaccine->id}}" method="post">
                     @csrf
                     @method('patch')
+
                     <div class="modal-body">
                         <label for="basic-url" class="form-label">Vaccine Name</label>
                         <div class="input-group mb-3">
@@ -123,6 +133,7 @@
                             <input type="file" class="form-control" name="image">
                         </div>
                     </div>
+
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         <button type="submit" class="btn btn-primary">Save changes</button>
@@ -142,9 +153,11 @@
                     <h5 class="modal-title" id="exampleModalLabel">Edit Vaccine</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+
                 <form action="/vaccine/delete/{{$vaccine->id}}" method="post">
                     @csrf
                     @method('delete')
+
                     <div class="modal-body">
                         <h3>Are you sure delete "{{$vaccine->name}}"</h3>
                     </div>
