@@ -20,8 +20,7 @@
                 </button>
             </div>
         
-            <!-- Modal CREATED BY -->
-            <!-- Modal -->
+            <!-- MODAL FOOTER -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
@@ -38,5 +37,6 @@
                   </div>
                 </div>
               </div>
+              <!-- END MODAL FOOTER -->
             </div>
                 </footer>
