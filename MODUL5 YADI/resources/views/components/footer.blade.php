@@ -15,7 +15,7 @@
             <div class=" text-center text-white p-3 bg-danger">
                 <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal"> 
                   <a class="text-light">
-                Created BY : YADI NUGRAHA | 1202193338 | SI 43 04
+                CREATED WITH LOVE BY : YADI NUGRAHA | 1202193338 | SI 43 04
                   </a> 
                 </button>
             </div>
@@ -30,8 +30,8 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
                   <div class="modal-body">
-                  <p>KESAN : BERJALAN DENGAN BAIK DAN PERTAMA KALINYA TERKENA PLAGIARISME XIXIXI</p>
-                  <p>PESAN : SEMOGA KEDEPANNYA LEBIH BAIK LAGI</p>
+                  <p>KESAN : WAD SUSAH,PUSING,MENGHADEH POKONYA</p>
+                  <p>PESAN : SEMOGA KEDEPANNYA LEBIH BAIK LAGI DAN BISA JAGO NGODING</p>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>

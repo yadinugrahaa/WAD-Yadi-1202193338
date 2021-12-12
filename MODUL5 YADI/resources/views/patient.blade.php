@@ -120,7 +120,7 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Edit Patient</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">EDIT PASIEN</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <form action="/patient/update/{{$patient->id}}" method="post">
@@ -174,7 +174,9 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Delete Patient</h5>
+
+                            <h5 class="modal-title" id="exampleModalLabel">HAPUS PASIEN</h5>
+
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
 
@@ -182,7 +184,7 @@
                             @csrf
                             @method('delete')
                             <div class="modal-body">
-                                <h5>Yakin ingin menghapus pasien "{{$patient->name}}" ?</h5>
+                                <h5>Yakin ingin menghapus pasien <b>{{$patient->name}}?</b></h5>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

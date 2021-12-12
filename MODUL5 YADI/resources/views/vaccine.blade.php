@@ -103,7 +103,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Edit Vaccine</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">EDIT VAKSIN</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
 
@@ -135,8 +135,8 @@
                     </div>
 
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Save changes</button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-success">Save changes</button>
                     </div>
                 </form>
 
@@ -150,7 +150,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Edit Vaccine</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">HAPUS VAKSIN</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
 
@@ -159,7 +159,7 @@
                     @method('delete')
 
                     <div class="modal-body">
-                        <h3>Are you sure delete "{{$vaccine->name}}"</h3>
+                        <h5>Yakin ingin menghapus Vaksin <b>{{$vaccine->name}}?</b></h5>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
