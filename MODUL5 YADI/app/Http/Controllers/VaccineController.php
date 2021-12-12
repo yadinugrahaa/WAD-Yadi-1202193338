@@ -23,15 +23,9 @@ class VaccineController extends Controller
 
         vaccine::create($attr);
 
-        return redirect()->back()->with('Berhasi', 'Berhasil menambah vaccine.');
+        return redirect()->back()->with('success', 'BERHASIL TAMBAH VAKSIN!');
     }
 
-    public function destroy(vaccine $vaccine)
-    {
-        $vaccine->delete();
-        return redirect()->back()->with('Berhasil', 'Berhasil hapus vaccine.');
-    }
-    
     public function update(vaccine $vaccine)
     {
         $attr = request()->validate([
@@ -41,8 +35,12 @@ class VaccineController extends Controller
         ]);
 
         $vaccine->update($attr);
-        return redirect()->back()->with('Berhasil', 'Berhasil update vaccine.');
+        return redirect()->back()->with('success', 'BERHASIL UPDATE VAKSIN!');
     }
 
-
+    public function destroy(vaccine $vaccine)
+    {
+        $vaccine->delete();
+        return redirect()->back()->with('success', 'BERHASIL HAPUS VAKSIN!');
+    }
 }
