@@ -10,8 +10,8 @@ class PatientController extends Controller
 {
     public function index()
     {
-        $vaccines = vaccine::get();
-        $patients = patient::get();
+        $vaccines = vaccine::post();
+        $patients = patient::post();
 
         return view('patient', compact('vaccines', 'patients'));
     }
