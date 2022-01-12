@@ -28,5 +28,5 @@ Route::delete('/patient/delete/{patient:id}', [PatientController::class, 'destro
 
 Route::get('/vaccine', [VaccineController::class, 'index']);
 Route::post('/vaccine', [VaccineController::class, 'store']);
-Route::patch('/vaccine/update/{vacine:id}', [VaccineController::class, 'update']);
+Route::patch('/vaccine/update/{vaccine:id}', [VaccineController::class, 'update']);
 Route::delete('/vaccine/delete/{vaccine:id}', [VaccineController::class, 'destroy']);
