@@ -21,7 +21,7 @@ class VaccineController extends Controller
             'description' => 'required'
         ]);
 
-        vaccine::create($atr);
+        vaccine::create($attr);
 
         return redirect()->back()->with('success', 'BERHASIL TAMBAH VAKSIN!');
     }
